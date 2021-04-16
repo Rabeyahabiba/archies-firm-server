@@ -25,12 +25,12 @@ client.connect(err => {
     serviceCollection.find()
     .toArray((err, items) => {
       res.send(items)
-       console.log('from database', items)
+      //  console.log('from database', items)
     })
   })
   app.post('/addService', (req,res) =>{
     const newService = req.body;
-    console.log('adding new service', newService)
+    // console.log('adding new service', newService)
     serviceCollection.insertOne(newService)
     .then(result => {
         // console.log('inserted count' , result.insertedCount )
@@ -42,9 +42,11 @@ app.post('/addOrder', (req,res) =>{
   console.log('adding new order', order)
   ordersCollection.insertOne(order)
   .then(result => {
+      console.log(result.insertedCount);
       res.send(result.insertedCount> 0)
   })
 })
 });
+
 
 app.listen(process.env.PORT || port)
