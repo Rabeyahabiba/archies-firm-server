@@ -2,7 +2,7 @@
 
 #### Archies Firm website is a complete solution for interior decoration,design and planning for residential area, office,restaurant, commercial space as well
 
-Site link:(https://github.com/facebook/create-react-app).
+Site link:(https://archies-67c87.web.app/).
 
 ## Features :
 - Booking facilities of different categories including price range for user
